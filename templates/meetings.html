@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetings Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/meetingstyle.css') }}">
+  
+</head>
+<div class="header">
+
+    <img src="{{ url_for('static', filename='images/L1.png') }}"  alt="Left Image" class="logo">
+    <span class="notifications-icon"><i class="fas fa-bell"></i><span class="notification-dot"></span></span>
+
+    <!-- Notifications panel -->
+    <div class="notifications">
+        <!-- Notifications will be loaded here -->
+    </div>
+    <span class="user-logo"><a href="account"><i class="fas fa-user"></i><span class="notification-dot"></span></a></span>
+
+</div>
+
+
+<div class="dashbaground">
+
+    <img src="{{ url_for('static', filename='images/dash3.png') }}"  alt="Left Image" class="dashbaground" >
+
+
+</div>
+
+
+
+<div class="h1">
+    <i class="fas fa-home"></i>
+    <a  href="user" onclick="showPage('Dashboard')">Home </a>
+</div>
+
+
+<div class="h2">
+    <i class="fas fa-calendar-alt"></i>
+    <a  href="meetings" onclick="showPage('Dashboard')">Meetings </a>
+</div>
+
+
+<div class="h3">
+    <i class="far fa-calendar"></i>
+    <a  href="schdual" onclick="showPage('Dashboard')">Schedule </a>
+</div>
+
+<div class="line"></div>
+
+<div class="h4">
+    <i class="fas fa-cog"></i>
+    <a  href="settings" onclick="showPage('Dashboard')">Settings </a>
+</div>
+
+
+<div class="h5">
+    <i class="fas fa-sign-out-alt"></i>
+    <a href="#" onclick="openLogoutModal()">LogOut</a>
+</div>
+
+<div class="h6">
+
+    <h  href="#" onclick="showPage('Dashboard')">Welcome </h>
+</div>
+
+
+
+   
+<div class="h7"><span id="username">{{ username }}</span></div>
+
+
+
+<!--<div class="vertical-rectangle another-rectangle"></div>-->
+<!-- Modal HTML -->
+<div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Are you sure you want to logout?</p>
+        <div class="modal-buttons">
+            <button id="confirmLogout">Yes</button>
+            <button id="cancelLogout">No</button>
+        </div>
+    </div>
+</div>
+<div class="line2"></div>
+
+    <div class="vertical-rectangle solid-white"></div>
+
+<div class="hints-images">
+    <div class="paragraph">New Meetings</div>
+    <div class="scroll-item"><a href="join" ><img src="{{ url_for('static', filename='images/1a.jpg') }}" alt="Join Meeting" class="image"></a></div>
+    <div class="scroll-item"><a href="creat_meeting"><img src="{{ url_for('static', filename='images/2a.jpg') }}" alt="Image 2"></a></div>
+
+</div>
+
+
+<div class="hints-images2">
+    <div class="line3"></div>
+    <div class="paragraph2">Meetings Cloud</div>
+    <div class="scroll-item"><a href="uploading_meeting"><img src="{{ url_for('static', filename='images/3a.jpg') }}" alt="Image 3"></a></div>
+    <div class="scroll-item"><a href="previous"><img src="{{ url_for('static', filename='images/6a.jpg') }}" alt="Image 3"></a></div>
+</div>
+<div class="js"></div>
+<div class="vertical-rectangle"></div>
+</div>
+
+
+
+<div class="line4"></div>
+
+
+
+<div class="js">
+<div class="paragraph3">Here you can create a new meeting or join a meeting and benefit from the
+    features of Vision available from artificial intelligence, such as face detection,
+    tracking of the face, head, and eyes, and features of determining facial expressions.
+</div>
+</div>
+
+<div class="js">
+<div class="paragraph4">Here you can keep the meetings on the private
+    Vision server and they are completely
+    protected and you can return to the meetings that you saved at any time
+    .</div>
+</div>
+</div>
+<!-- <div class="join-meeting-menu" id="joinMeetingMenu">
+    <span class="close-button" onclick="closeJoinMeetingMenu()">&times;</span>
+    <h2>Join Meeting</h2>
+    <form id="meetingForm">
+        <input type="text" id="meetingId" placeholder="Meeting ID" required><br>
+        <input type="password" id="meetingPassword" placeholder="Password" required><br>
+        <button type="submit" class="submit-button" >Join</button>
+    </form>
+</div> -->
+
+<a href="account">
+    <div class="icon1">
+        <i class="fas fa-user"></i>
+    </div>
+</a>
+
+<div class="meetings-joined">Joined: <span id="meetingsJoinedCount">0</span></div>
+<!-- Display the number of meetings created by the user -->
+<div class="meetings-created">Created: <span id="meetingsCreatedCount">0</span></div>
+
+<div class="line6"></div>
+<div class="user-details">
+    <div class="user-icon-background"></div>
+    <span class="user-name">{{ username }}</span>
+</div>
+
+<!--<div class="vertical-rectangle another-rectangle"></div>-->
+
+<script src="{{ url_for('static', filename='js/meeingjs.js') }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Meeting</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/uploading_meeting_style.css') }}">
+
+</head>
+<body>
+<div class="container">
+    <h2>Upload Meeting</h2>
+    <div id="uploadForm">
+        <input type="file" id="fileInput" accept=".mp4, .avi, .mov">
+        <button id="uploadButton">Upload</button>
+    </div>
+    <div id="uploadProgress">
+        <div id="progressPercentage">Uploading...</div>
+        <div class="progressBar">
+            <div id="progressBarFill"></div>
+        </div>
+    </div>
+    <div id="uploadMessage"></div>
+</div>
+
+<script src="{{ url_for('static', filename='js/uploading_meeting_js') }}" defer></script>
+
+</body>
+</html>

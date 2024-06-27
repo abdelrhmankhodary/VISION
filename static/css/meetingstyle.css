@@ -1,0 +1,602 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    /*background-color: rgba(253,255,251,0.97);*/
+    overflow-y: auto; /* Hide the scrollbar until content overflows */
+    scrollbar-gutter: auto;
+    align-items:normal;
+}
+.header {
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    border-radius: 20px 20px 20px 20px;
+    height: 35px;
+}
+.logo {
+    width: 150px;
+}
+.user-logo {
+    font-size: 24px;
+    margin-right: 10px;
+}
+.user-logo a {
+    text-decoration: none;
+    color: #333;
+}
+.dashboard {
+    background: none;
+    width: 150px;
+    position: absolute;
+    height: 500px;
+    padding: 20px;
+    border-radius: 0px 50px 50px 0px;
+    margin-top: 30px;
+
+
+}
+.pages {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    margin-top: 30px;
+
+}
+.pages a:hover {
+    background-color: #ddd;
+}
+.content {
+    padding: 20px;
+    margin-left: 20%;
+}
+.dashbaground img{
+    height: 600px;
+
+    border-radius: 0px 30px 30px 0px;
+    width: 250px;
+    position: absolute;
+
+    margin-top: 40px;
+    margin-right: 200px;
+
+
+
+}
+.h1 a{
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    margin-left: 10px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+
+
+
+
+}
+.h1 {
+    font-weight: bold;
+    position: absolute;
+    top: 235px;
+    margin-left: 80px;
+    font-size: 25px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+
+
+}
+.h2{
+    font-family: "Segoe UI";
+    font-weight: normal;
+    position: absolute;
+    top: 310px;
+    margin-left: 100px;
+    font-size: 20px;
+    color:#5B5A5A;
+
+
+
+
+
+}
+.h2 a{
+    text-decoration: none;
+    position: absolute;
+    top: 0px;
+    margin-left: 10px;
+
+    font-weight: bold;
+
+    font-size: 20px;
+    color: #5B5A5A;
+    font-family: "Segoe UI";
+
+
+
+
+}
+.h3{
+    font-weight: normal;
+    position: absolute;
+    top: 375px;
+    margin-left: 80px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+
+}
+.h3 a{
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+
+}
+.h4{
+    font-weight: normal;
+    position: absolute;
+    top: 475px;
+    margin-left: 80px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+
+}
+.h4 a{
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+
+}
+.h5 {
+    font-weight:normal;
+    position: absolute;
+    top: 525px;
+    margin-left: 80px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+
+}
+
+.h5 a{
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+
+
+}
+.h6{
+    font-weight:bold;
+    position: absolute;
+    top: 100px;
+    margin-left: 60px;
+    font-size: 30px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+}
+.h7{
+    font-weight:bold;
+    position: absolute;
+    top: 140px;
+    margin-left: 30px;
+    font-size: 30px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+}
+.line {
+    width: 200px;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 450px;
+    left: 0;
+    margin-left: 30px;
+
+}
+.notifications {
+    display: none; /* Initially hide the notifications panel */
+    position: absolute;
+    top: 50px; /* Adjust the top position based on your header's height */
+    right: 60px; /* Adjust the right position based on your layout */
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 550px;
+    width: 200px;
+    height: auto;
+
+
+}
+
+.notifications a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 5px;
+}
+.notification-icon {
+    position: relative;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: none; /* Initially hide the dot */
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+.modal-content p {
+
+    margin-left: 90px;
+    font-weight: bold;
+}
+.scroll-item img {
+    width: 190px;
+    height: 199px;
+    border-radius: 10px;
+    margin-left: 100px;
+
+}
+.hints-images {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+    margin-left: 250px;
+    margin-right: 100px;
+    height: 200px;
+    width: 700px;
+
+    margin-top: 100px;
+    height: 200px;
+}
+.hints-images2 {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+    margin-left: 250px;
+    margin-right: 100px;
+    height: 200px;
+    width: 700px;
+
+    margin-top: 50px;
+    height: 200px;
+}
+.paragraph{
+
+   font-weight:bold;
+   position: absolute;
+   top: 140px;
+   left: 330px;
+   font-size: 20px;
+
+}
+.line2 {
+    width: 550px;
+    height: 1.5px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    top:120px ;
+    background-color: white;
+    left: 320px;
+}
+.paragraph2{
+
+    font-weight:bold;
+    position: absolute;
+    top:430px;
+    left: 330px;
+    font-size: 20px;
+
+}
+.line3 {
+    width: 550px;
+    height: 1.5px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    top:400px ;
+    background-color: white;
+    left: 320px;
+}
+.vertical-rectangle {
+     position:fixed;
+     right: 50px;
+     width: 400px;
+     height: 550px;
+     top: 120px;
+     border: 2px solid white;
+     border-radius: 20px;
+     background-color: white;
+ }
+.vertical-rectangle solid-white {
+    position: absolute;
+    right: 50px;
+    width: 600px;
+    height: 400px;
+    top: 120px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: white;
+}
+.line4 {
+    width: 300px;
+    height: 1.5px;
+    color:rgba(127,124,129,0.71);
+    position: absolute;
+    bottom: 0;
+    top:400px ;
+    background-color: rgba(127,124,129,0.71);
+   right: 95px;
+}
+.paragraph3{
+    width: 300px;
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    top: 150px;
+    right: 90px;
+    text-align: center;
+    line-height: 30px;
+    font-family: "Farsi Simple Bold";
+
+
+
+}
+.paragraph4{
+
+    width: 300px;
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    top: 440px;
+    right: 90px;
+    text-align: center;
+    line-height: 30px;
+    font-family: "Farsi Simple Bold";
+
+}
+.js {
+    opacity: 0.2;
+    transition: opacity 0.3s; /* Add smooth transition */
+}
+.join-meeting-menu {
+    display: none; /* Initially hide the menu */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style for the submit button */
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+.image {
+    cursor: pointer;
+}
+.user-details {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.user-icon-background {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+
+    left:10px;
+    opacity: 0.5;
+    border-radius: 20px;
+    margin-bottom: 75px;
+
+
+}
+
+.icon1 {
+    color: whitesmoke;
+
+    position: absolute;
+    left: 120px;
+    font-size: 40px;
+    bottom: 95px;
+}
+
+.user-name {
+    font-family: "Segoe UI";
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    left: 60px;
+    width: auto;
+    bottom: 50px;
+    text-align: center;
+
+}
+.line6{
+    width: 1px; /* Make the line vertical */
+    height: 50px; /* Adjust the height as needed */
+    background-color: #ccc;
+    position: absolute;
+    bottom: 10px;
+    left: 130px;
+
+
+}
+.meetings-joined {
+    position: absolute;
+    left: 50px; /* Adjust left position for meetings joined count */
+    bottom: 10px;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    color: white;
+    width: 25px;
+
+
+
+}
+
+.meetings-created {
+    position: absolute;
+    left: 150px; /* Adjust right position for meetings created count */
+    bottom: 10px;
+    font-family: "Segoe UI";
+    font-size: 16px;
+
+    color:white;
+    width: 25px;
+}
+.vertical-rectangle.another-rectangle {
+    position:absolute;
+    left: 150px; /* Adjust position as needed */
+    width: 600px; /* Adjust width as needed */
+    height: 250px; /* Adjust height as needed */
+    top: 250px; /* Adjust position as needed */
+    background-color: white; /* Set background color to white */
+    border-radius: 15px; /* Adjust border radius as needed */
+/* Add border if desired */
+}

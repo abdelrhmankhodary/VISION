@@ -1,0 +1,41 @@
+<div class="button-container">
+    <button id="btn1" onclick="runAlgorithm('/run_algo1')">Algorithm 1</button>
+    <button id="btn2" onclick="runAlgorithm('/run_algo2')">Algorithm 2</button>
+    <button id="btn3" onclick="runAlgorithm('/run_algo3')">Algorithm 3</button>
+</div>
+
+<script>
+    function runAlgorithm(url) {
+        fetch(url, {
+            method: 'GET',
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data); // You can handle the response data here
+            alert(data);
+        })
+        .catch(error => console.error('Error:', error));
+    }
+</script>
+
+<style>
+    .button-container {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .button-container button {
+        margin-top: 5px;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button-container button:hover {
+        background-color: #0056b3;
+    }
+</style>

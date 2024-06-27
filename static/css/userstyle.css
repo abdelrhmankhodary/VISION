@@ -1,0 +1,595 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    overflow-y: auto; /* Hide the scrollbar until content overflows */
+    scrollbar-gutter: auto;
+    align-items:normal;
+}
+.header {
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    border-radius: 20px 20px 20px 20px;
+    height: 35px;
+    
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .container {
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.logo {
+    width: 150px;
+}
+.user-logo {
+    font-size: 24px;
+    margin-right: 10px;
+}
+.user-logo a {
+    text-decoration: none;
+    color: #333;
+}
+.dashboard {
+    background: none;
+    width: 150px;
+    position: fixed;
+    height: 500px;
+    padding: 20px;
+    border-radius: 0px 50px 50px 0px;
+    margin-top: 30px;
+
+
+}
+.pages {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    margin-top: 30px;
+
+}
+.pages a:hover {
+    background-color: #ddd;
+}
+.content {
+    padding: 20px;
+    margin-left: 20%;
+}
+.dashbaground img{
+   height: 600px;
+
+   border-radius: 0px 30px 30px 0px;
+   width: 250px;
+   position: fixed;
+
+   margin-top: 95px;
+   margin-right: 200px;
+  
+
+
+}
+.h1 a{
+   font-weight: bold;
+   position: fixed;
+   top: 225px;
+   margin-left: 10px;
+   font-size: 25px;
+   color: #5B5A5A;
+   font-family: "Segoe UI";
+   text-decoration: none;
+
+
+
+
+}
+.h1 {
+    font-weight: bold;
+    position: fixed;
+    top: 225px;
+    margin-left: 100px;
+    font-size: 25px;
+    color: #5B5A5A;
+    font-family: "Segoe UI";
+
+
+
+
+}
+.h2{
+    font-family: "Segoe UI";
+    font-weight: normal;
+    position: fixed;
+    top: 300px;
+    margin-left: 80px;
+    font-size: 20px;
+    color: white;
+
+
+
+
+
+}
+.h2 a{
+    font-family: "Segoe UI";
+
+    position: fixed;
+    top: 300px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+
+
+
+
+}
+.h3{
+    font-weight: normal;
+    position: fixed;
+    top: 375px;
+    margin-left: 80px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+
+}
+.h3 a{
+    font-weight: bold;
+    position: fixed;
+    top: 375px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+    text-decoration: none;
+
+
+
+}
+.h4{
+    font-weight: normal;
+    position: fixed;
+    top: 475px;
+    margin-left: 80px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+
+}
+.h4 a{
+    font-weight: bold;
+    position: fixed;
+    top: 475px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+    text-decoration: none;
+
+
+
+}
+.h5 {
+    font-weight:normal;
+    position: fixed;
+    top: 525px;
+    margin-left: 80px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+
+}
+
+.h5 a{
+    font-weight: bold;
+    position: fixed;
+    top: 525px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+    font-family: "Segoe UI";
+    text-decoration: none;
+
+
+
+
+}
+.h6{
+    font-weight:bold;
+    position: fixed;
+    top: 100px;
+    margin-left: 60px;
+    font-size: 30px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+}
+.h7{
+    font-weight:bold;
+    position: fixed;
+    top: 140px;
+    margin-left: 30px;
+    font-size: 30px;
+    color: white;
+    font-family: "Segoe UI";
+
+
+
+}
+.line {
+    width: 200px;
+    height: 1px;
+    background-color: #ccc;
+    position: fixed;
+    top: 450px;
+    left: 0;
+    margin-left: 30px;
+
+}
+.notifications {
+    display: none; /* Initially hide the notifications panel */
+    position: absolute;
+    top: 50px; /* Adjust the top position based on your header's height */
+    right: 60px; /* Adjust the right position based on your layout */
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 550px;
+    width: 200px;
+    height: auto;
+
+
+}
+
+.notifications a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 5px;
+}
+.notification-icon {
+    position: relative;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: none; /* Initially hide the dot */
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+.modal-content p {
+
+    margin-left: 90px;
+    font-weight: bold;
+}
+.user-details {
+    position: fixed;
+    bottom: 20px;
+    left: 35px;
+    display: flex;
+    align-items: center;
+
+}
+
+.user-icon-background {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    position: fixed;
+    width: 200px;
+    height: 100px;
+
+    left:30px;
+    opacity: 0.5;
+    border-radius: 20px;
+     margin-bottom: 75px;
+
+
+}
+
+.icon1 {
+    color: whitesmoke;
+
+    position: fixed;
+    left: 120px;
+    font-size: 40px;
+    bottom: 95px;
+}
+
+.user-name {
+    font-family: "Segoe UI";
+    font-size: 18px;
+    color: white;
+    position: fixed;
+    left: 60px;
+    width: auto;
+    bottom: 70px;
+    text-align: center;
+
+}
+.line2{
+    width: 1px; /* Make the line vertical */
+    height: 50px; /* Adjust the height as needed */
+    background-color: #ccc;
+    position: fixed;
+    bottom: 10px;
+    left: 130px;
+
+
+}
+.meetings-joined {
+    position: fixed;
+    left: 50px; /* Adjust left position for meetings joined count */
+    bottom: 10px;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    color: white;
+    width: 25px;
+
+
+
+}
+
+.meetings-created {
+    position: fixed;
+    left: 150px; /* Adjust right position for meetings created count */
+    bottom: 10px;
+    font-family: "Segoe UI";
+    font-size: 16px;
+
+    color:white;
+    width: 25px;
+}
+
+.meetings-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-label {
+    font-weight: bold;
+}
+
+.item-value {
+    margin-top: 5px;
+    font-size: 20px;
+}
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Hover effect */
+.h1:hover, .h2:hover, .h3:hover, .h4:hover, .h5:hover, .h6:hover, .h7:hover {
+    color: #f39c12; /* Change to your desired hover color */
+    transition: color 0.3s;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.cta {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta:hover {
+    background-color: #0056b3;
+}
+
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 300px;
+    color: rgb(8, 8, 8);
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+   margin-left: 200px;
+}
+
+#hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    right: 20px;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#features, #benefits, #pricing, #how-it-works, #integrations, #security, #faq {
+    padding: 50px 20px;
+    text-align: center;
+    margin-left: 180px;
+    margin-top: 100px;
+}
+
+.feature, .plan, .step {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer div, footer p {
+    margin: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+#stickyElement {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+}
+ 

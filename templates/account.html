@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/accountstyle.css') }}">
+
+    
+</head>
+<div class="header">
+
+    <img src="{{ url_for('static', filename='images/L1.png') }}"  alt="Left Image" class="logo">
+    <span class="notifications-icon"><i class="fas fa-bell"></i><span class="notification-dot"></span></span>
+
+    <!-- Notifications panel -->
+    <div class="notifications">
+        <!-- Notifications will be loaded here -->
+    </div>
+    <span class="user-logo"><a href="account"><i class="fas fa-user"></i><span class="notification-dot"></span></a></span>
+
+</div>
+
+
+<div class="dashbaground">
+
+    <img src="{{ url_for('static', filename='images/dash6.jpg') }}"  alt="Left Image" class="dashbaground" >
+
+
+</div>
+
+
+
+<div class="h1">
+    <i class="fas fa-home"></i>
+    <a  href="user" onclick="showPage('Dashboard')">Home </a>
+</div>
+
+
+<div class="h2">
+    <i class="fas fa-calendar-alt"></i>
+    <a  href="meetings" onclick="showPage('Dashboard')">Meetings </a>
+</div>
+
+
+<div class="h3">
+    <i class="far fa-calendar"></i>
+    <a  href="schdual" onclick="showPage('Dashboard')">Schedule </a>
+</div>
+
+<div class="line"></div>
+
+<div class="h4">
+    <i class="fas fa-cog"></i>
+    <a  href="settings" onclick="showPage('Dashboard')">Settings </a>
+</div>
+
+
+<div class="h5">
+    <i class="fas fa-sign-out-alt"></i>
+    <a href="#" onclick="openLogoutModal()">LogOut</a>
+</div>
+
+<div class="h6">
+
+    <h  href="#" onclick="showPage('Dashboard')">Welcome </h>
+</div>
+
+
+
+<div class="h7"><span id="username">{{ username }}</span></div>
+
+
+
+<!-- Modal HTML -->
+<div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Are you sure you want to logout?</p>
+        <div class="modal-buttons">
+            <button id="confirmLogout">Yes</button>
+            <button id="cancelLogout">No</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="header">
+        <h1>Account</h1>
+    </div>
+    <div class="profile-pic" id="profilePicContainer">
+        <img src="default_profile_pic.jpg" alt="Profile Picture" id="profilePic">
+    </div>
+    <input type="file" class="file-input" id="profilePicInput" accept="image/*">
+    <button class="btn1" id="changePicButton">Change</button>
+    <div class="profile-details">
+        <div>
+            <div><strong>ID:</strong> <span class="editable" id="userId">123456</span></div>
+            <div><strong>Full Name:</strong> <input type="text" class="editable" id="fullName" value="abdelrahman mohmed khdary"></div>
+            <div><strong>Email:</strong> <input type="email" class="editable" id="email" value="abdelrhman@gmail.com"></div>
+        </div>
+        <div>
+            <div><strong>Username:</strong> <input type="text" class="editable" id="username2" value="abdokhodaryy"></div>
+            <div><strong>Gender:</strong> <input type="text" class="editable" id="gender" value="Male"></div>
+            <div><strong>Location:</strong> <input type="text" class="editable" id="location" value="assuit,egept"></div>
+        </div>
+    </div>
+    <button class="btn" id="saveButton">Save Changes</button>
+    <button class="btn" id="editButton" style="display: none;">Edit Profile</button>
+</div>
+
+
+
+<a href="account">
+    <div class="icon1">
+        <i class="fas fa-user"></i>
+    </div>
+</a>
+
+<div class="meetings-joined">Joined: <span id="meetingsJoinedCount">0</span></div>
+<!-- Display the number of meetings created by the user -->
+<div class="meetings-created">Created: <span id="meetingsCreatedCount">0</span></div>
+
+<div class="line2"></div>
+<div class="line6"></div>
+<div class="user-details">
+    <div class="user-icon-background"></div>
+    <span class="user-name">{{ username }}</span>
+</div>
+    
+
+<script src="{{ url_for('static', filename='js/accountjs.js') }}" defer></script>
+</body>
+</html>

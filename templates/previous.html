@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Meetings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/previousstyle.css') }}">
+
+</head>
+<body>
+<div class="container">
+    <h1>Previous Meetings</h1>
+    <div class="frame">
+        <ul class="meeting-list" id="meetingList">
+            <!-- Meeting items will be populated here -->
+        </ul>
+        <p class="no-meetings" id="noMeetingsMessage" style="display: none;">No meetings yet.</p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/previousjs.js') }}" defer></script>
+
+</body>
+</html>

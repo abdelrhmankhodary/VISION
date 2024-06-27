@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/userstyle.css') }}">
+    
+</head>
+<body>
+<div class="header">
+    <img src="{{ url_for('static', filename='images/L1.png') }}" alt="Logo" class="logo">
+    <span class="notifications-icon"><i class="fas fa-bell"></i><span class="notification-dot"></span></span>
+    <div class="notifications"></div>
+    <span class="user-logo"><a href="account"><i class="fas fa-user"></i><span class="notification-dot"></span></a></span>
+</div>
+
+<div class="dashbaground" >
+    <img src="{{ url_for('static', filename='images/dash2.png') }}" alt="Background" class="dashbaground">
+</div>
+
+
+<div class="h1"><i class="fas fa-home"></i><a>Home</a></div>
+<div class="h2"><i class="fas fa-calendar-alt"></i><a href="meetings">Meetings</a></div>
+<div class="h3"><i class="far fa-calendar"></i><a href="schdual">Schedule</a></div>
+<div class="line"></div>
+<div class="h4"><i class="fas fa-cog"></i><a href="settings">Settings</a></div>
+<div class="h5"><i class="fas fa-sign-out-alt"></i><a href="#" onclick="openLogoutModal()">LogOut</a></div>
+<div class="h6"><h>Welcome</h></div>
+<div class="h7"><span id="username">{{ username }}</span></div>
+
+<a href="account">
+    <div class="icon1"><i class="fas fa-user"></i></div>
+</a>
+
+<div class="meetings-joined">Joined: <span id="meetingsJoinedCount">0</span></div>
+<div class="meetings-created">Created: <span id="meetingsCreatedCount">0</span></div>
+<div class="line2"></div>
+<div class="user-details">
+    <div class="user-icon-background"></div>
+    <span class="user-name">{{ username }}</span>
+</div>
+
+
+
+
+<div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Are you sure you want to logout?</p>
+        <div class="modal-buttons">
+            <button id="confirmLogout">Yes</button>
+            <button id="cancelLogout">No</button>
+        </div>
+    </div>
+</div>
+<section id="hero">
+    <h1>Connect Seamlessly with High-Quality Video Conferencing</h1>
+    <p>Experience crystal clear video, easy screen sharing, and more.</p>
+    
+</section>
+
+<canvas id="myChart" style= "margin-left: 550px ; margin-top: 40px; max-width:600px; max-height: 400px;"></canvas>
+
+<h20 style= "font-size: large; font-weight: bold; color: black; position: absolute; top: 300px; left: 725px;">Your sammary of meetings</h20>
+
+<ul id="meetingsHistory">
+    <!-- سيتم إضافة تفاصيل الميتينجات هنا ديناميكيًا -->
+</ul>
+
+<section id="pricing">
+    <h2>Pricing</h2>
+    <div class="plan">
+        <h3>Free Plan</h3>
+        <p>Basic features for personal use.</p>
+    </div>
+    <!-- More plans here -->
+</section>
+<section id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="step">
+        
+        <p>Sign up for an account.</p>
+    </div>
+    <!-- More steps here -->
+</section>
+
+<section id="integrations">
+    <h2>Integrations</h2>
+    <p>Works with your favorite tools:</p>
+   
+    <!-- More integrations here -->
+</section>
+
+<section id="security">
+    <h2>Security & Privacy</h2>
+    <p>We take your security seriously:</p>
+    <ul>
+        <li>End-to-end encryption</li>
+        <li>GDPR compliant</li>
+    </ul>
+</section>
+
+<section id="faq">
+    <h2>FAQ</h2>
+    <div class="question">
+        <h3>How do I start a meeting?</h3>
+        <p>Simply click the "Start Meeting" button on the homepage.</p>
+    </div>
+    <!-- More FAQs here -->
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chartData = {
+            labels: ['	Jan', '	Feb', '	Mar', '	Apr', '	May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'meetings',
+                data: [1, 3,0, 9, 6,10, 0,0,0,0,0,0],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(153, 102, 255, 0.3)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+
+    // Example data (replace with actual data from your application)
+let meetingsJoined = 16;
+let meetingsCreated = 0;
+
+// Update the HTML with the actual counts
+document.getElementById('meetingsJoinedCount').textContent = meetingsJoined;
+document.getElementById('meetingsCreatedCount').textContent = meetingsCreated;
+
+</script>
+
+<script src="{{ url_for('static', filename='js/userjs.js') }}" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

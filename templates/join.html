@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/joincss.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <title>Join Meeting</title>
+</head>
+<body>
+    <div class="container">
+        <form id="joinMeetingForm" class="form-card">
+            <h2>Join Meeting</h2>
+            <div class="form-group">
+                <label for="meetingId">Meeting ID:</label>
+                <input type="text" id="meetingId" name="meetingId" required>
+            </div>
+            <div class="form-group">
+                <label for="meetingPassword">Meeting Password:</label>
+                <input type="password" id="meetingPassword" name="meetingPassword" required>
+            </div>
+            <button type="submit">Join Meeting</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/joinjs.js') }}" defer></script>
+</body>
+</html>

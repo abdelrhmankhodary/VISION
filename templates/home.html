@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homestyle.css') }}">
+</head>
+<body>
+<header class="fixed-header">
+    <div class="container">
+        <div class="left-section">
+            <img src="{{ url_for('static', filename='images/L1.png') }}" alt="logo">
+        </div>
+        <div class="mid-section">
+            <form action="">
+                <input type="text" placeholder="What do you want to search for?">
+                <button onclick="search()"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="auth-links">
+            <a href="signin">Login</a>
+            <a href="signup">Sign Up</a>
+        </div>
+    </div>
+</header>
+
+<div class="midbody">
+    <div class="background-image">
+        <img src="{{ url_for('static', filename='images/background.png') }}" alt="background">
+    </div>
+    <figcaption class="text">’’If all continents are getting farther apart,</figcaption>
+    <figcaption class="a"> They  will meet in VISION.’’</figcaption>
+    <div class="overlay-images">
+        <img src="{{ url_for('static', filename='images/1.jpeg') }}" alt="image1">
+        <img src="{{ url_for('static', filename='images/2.jpeg') }}" alt="image2">
+        <img src="{{ url_for('static', filename='images/3.jpeg') }}" alt="image3">
+        <img src="{{ url_for('static', filename='images/4.jpeg') }}" alt="image4">
+        <img src="{{ url_for('static', filename='images/5.jpeg') }}" alt="image5">
+    </div>
+</div>
+
+<div class="hints-images">
+    <div class="paragraph">Recommended For You</div>
+    <div class="scroll-item"><a href="signin"><img src="{{ url_for('static', filename='images/1a.jpg') }}" alt="Image 1"></a></div>
+    <div class="scroll-item"><a href="signin"><img src="{{ url_for('static', filename='images/2a.jpg') }}" alt="Image 2"></a></div>
+    <div class="scroll-item"><a href="signin"><img src="{{ url_for('static', filename='images/3a.jpg') }}" alt="Image 3"></a></div>
+    <div class="scroll-item"><a href="signin"><img src="{{ url_for('static', filename='images/4a.jpg') }}" alt="Image 4"></a></div>
+    <div class="scroll-item"><a href="signup"><img src="{{ url_for('static', filename='images/5a.jpg') }}" alt="Image 5"></a></div>
+</div>
+
+<div class="vid">
+    <video width="600" height="600" autoplay muted loop>
+        <source src="{{ url_for('static', filename='images/1.mp4') }}" type="video/mp4">
+    </video>
+</div>
+
+<div class="text2">
+    <div class="text2">The VISION Difference</div>
+</div>
+<div class="text3">
+    <div class="text3">What sets us apart is not just the quality of our video conferencing capabilities but the integration of advanced AI features, revolutionizing the way we interact online.</div>
+</div>
+<div class="text4">
+    <div class="text4">Our Artificial Intelligence</div>
+</div>
+<div class="text5">
+    <div class="text5">We have incorporated state-of-the-art face detection and recognition technology. This not only adds an extra layer of security but also streamlines the user experience, making access to meetings swift and secure.​</div>
+</div>
+<div class="white-background"></div>
+
+<footer>
+    <div class="connect-us">
+        <h3>Connect Us</h3>
+        <div class="contact-info">
+            <p>Email: vision@gmail.com</p>
+            <p>Phone: +201091726226</p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/homejs.js') }}" defer></script>
+</body>
+</html>

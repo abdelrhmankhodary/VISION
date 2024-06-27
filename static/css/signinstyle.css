@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    height: 400px;
+    width: 600px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: normal;
+    margin-top: 40px;
+}
+
+h2 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: normal;
+    font-size: 13px;
+    margin-top: 30px;
+    width: 200px;
+    margin-left: 200px;
+    position: absolute;
+    margin-top: 30px;
+}
+
+form {
+    width: 100%;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 260px; /* Adjusted width to accommodate the icon */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    position: relative;
+}
+
+input[type="password"] {
+    padding-right: 40px; /* Added padding to the right for the icon */
+}
+
+input[type="text"] {
+    width: 290px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    width: 250px;
+    padding: 10px;
+    background-color: #1D19F8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0c08bf;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.pass {
+    margin-left: 150px;
+    margin-top: 20px;
+    width: 200px;
+}
+
+.username {
+    margin-left: 150px;
+    width: 200px;
+    margin-top: 100px;
+}
+
+.sup {
+    margin-left: 185px;
+    width: 200px;
+    margin-top: 100px;
+}
+
+.forgot-password {
+    margin-top: 20px;
+}
+
+.forgot-password a {
+    color: #1D19F8;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
